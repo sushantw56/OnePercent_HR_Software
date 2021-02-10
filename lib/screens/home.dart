@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:onepercent_hr_software/employee.dart';
 import 'package:onepercent_hr_software/screens/addemployee.dart';
+import 'package:onepercent_hr_software/widgets/profileCard.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -82,45 +83,108 @@ class _HomeState extends State<Home> {
             ],
           ),
           body: Container(
-              child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
-            child: Row(
-              children: [
-                Expanded(
-                  child: TextField(
-                    style: TextStyle(color: Colors.blue),
-                    decoration: InputDecoration(
-                        fillColor: Colors.white,
-                        hintText: "Search",
-                        hintStyle: TextStyle(color: Colors.blue.shade200),
-                        border: InputBorder.none),
+            child: Padding(
+              padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
+              child: Column(
+                children: [
+                  Row(
+                    children: [
+                      Expanded(
+                        child: TextField(
+                          style: TextStyle(color: Colors.blue),
+                          decoration: InputDecoration(
+                              fillColor: Colors.white,
+                              hintText: "Search",
+                              hintStyle: TextStyle(color: Colors.blue.shade200),
+                              border: InputBorder.none),
+                        ),
+                      ),
+                      GestureDetector(
+                        onTap: () {},
+                        child: Container(
+                          height: 40,
+                          width: 40,
+                          decoration: BoxDecoration(
+                              gradient: LinearGradient(colors: [
+                                const Color(0x36FFFFFF),
+                                const Color(0x0FFFFFFF)
+                              ]),
+                              borderRadius: BorderRadius.circular(40)),
+                          child: Icon(
+                            Icons.search,
+                            size: 25,
+                            color: Colors.blue,
+                          ),
+                        ),
+                      )
+                    ],
                   ),
-                ),
-                GestureDetector(
-                  onTap: () {},
-                  child: Container(
-                    height: 40,
-                    width: 40,
-                    decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [
-                          const Color(0x36FFFFFF),
-                          const Color(0x0FFFFFFF)
-                        ]),
-                        borderRadius: BorderRadius.circular(40)),
-                    child: Icon(
-                      Icons.search,
-                      size: 25,
-                      color: Colors.blue,
+                  Divider(
+                    thickness: 2,
+                  ),
+                  SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Row(
+                          children: [
+                            ProfileCard(
+                              name: "Sushant",
+                              position: "Flutter Developer",
+                              imageAddress: "assets/profile_image.png",
+                            ),
+                            ProfileCard(
+                              name: "Sushant",
+                              position: "Flutter Developer",
+                              imageAddress: "assets/profile_image.png",
+                            ),
+                            ProfileCard(
+                              name: "Sushant",
+                              position: "Flutter Developer",
+                              imageAddress: "assets/profile_image.png",
+                            ),
+                            ProfileCard(
+                              name: "Sushant",
+                              position: "Flutter Developer",
+                              imageAddress: "assets/profile_image.png",
+                            )
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            ProfileCard(
+                              name: "Hemang",
+                              position: "Flutter Developer",
+                              imageAddress: "assets/profile_image.png",
+                            ),
+                            ProfileCard(
+                              name: "Hemang",
+                              position: "Flutter Developer",
+                              imageAddress: "assets/profile_image.png",
+                            ),
+                            ProfileCard(
+                              name: "Hemang",
+                              position: "Flutter Developer",
+                              imageAddress: "assets/profile_image.png",
+                            ),
+                            ProfileCard(
+                              name: "Hemang",
+                              position: "Flutter Developer",
+                              imageAddress: "assets/profile_image.png",
+                            )
+                          ],
+                        )
+                      ],
                     ),
                   ),
-                )
-              ],
+                ],
+              ),
             ),
-          )),
+          ),
         )
       ],
     );
   }
+}
 
 //   void search() {
 //     employees.map((p) {

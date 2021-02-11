@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:date_field/date_field.dart';
 
 class AddEmployee extends StatefulWidget {
   @override
@@ -27,12 +28,15 @@ class _AddEmployeeState extends State<AddEmployee> {
               labelText: 'Phone',
             ),
           ),
-          TextFormField(
+          DateTimeFormField(
             decoration: const InputDecoration(
               icon: const Icon(Icons.calendar_today),
-              hintText: 'Enter Employee Date Of Birth',
+              hintStyle: TextStyle(color: Colors.black45),
               labelText: 'Date Of Birth',
             ),
+            mode: DateTimeFieldPickerMode.date,
+            autovalidateMode: AutovalidateMode.always,
+            onDateSelected: (DateTime value) {},
           ),
           TextFormField(
             decoration: const InputDecoration(

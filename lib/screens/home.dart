@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:onepercent_hr_software/employee.dart';
 import 'package:onepercent_hr_software/screens/addemployee.dart';
 import 'package:onepercent_hr_software/widgets/profileCard.dart';
 
@@ -9,58 +8,6 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  // List<Employee> employees = [
-  //   Employee(
-  //       name: 'Sushant',
-  //       profileImg: 'assets/profile_image.png',
-  //       designation: "Software Developer"),
-  //   Employee(
-  //       name: 'Hemang',
-  //       profileImg: 'assets/profile_image.png',
-  //       designation: "Software Developer")
-  // ];
-
-  // ignore: non_constant_identifier_names
-  // Widget employeeDetailCard(Employee) {
-  //   return Padding(
-  //     padding: const EdgeInsets.all(10.0),
-  //     child: Card(
-  //       color: Colors.grey[800],
-  //       child: Padding(
-  //         padding: const EdgeInsets.all(8.0),
-  //         child: Row(
-  //           children: <Widget>[
-  //             Padding(
-  //               padding: const EdgeInsets.all(8.0),
-  //               child: Container(
-  //                   width: 50.0,
-  //                   height: 50.0,
-  //                   decoration: new BoxDecoration(
-  //                       shape: BoxShape.circle,
-  //                       image: new DecorationImage(
-  //                           fit: BoxFit.cover,
-  //                           image: AssetImage(Employee.profileImg)))),
-  //             ),
-  //             Column(
-  //               crossAxisAlignment: CrossAxisAlignment.start,
-  //               children: <Widget>[
-  //                 Text(
-  //                   Employee.name,
-  //                   style: TextStyle(color: Colors.white, fontSize: 18),
-  //                 ),
-  //                 Text(
-  //                   Employee.designation,
-  //                   style: TextStyle(color: Colors.white, fontSize: 12),
-  //                 )
-  //               ],
-  //             )
-  //           ],
-  //         ),
-  //       ),
-  //     ),
-  //   );
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -87,6 +34,9 @@ class _HomeState extends State<Home> {
               padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 20),
               child: Column(
                 children: [
+                  SizedBox(
+                    height: 10,
+                  ),
                   Row(
                     children: [
                       Expanded(
@@ -99,7 +49,7 @@ class _HomeState extends State<Home> {
                               border: InputBorder.none),
                         ),
                       ),
-                      GestureDetector(
+                      InkWell(
                         onTap: () {},
                         child: Container(
                           height: 40,
@@ -122,59 +72,20 @@ class _HomeState extends State<Home> {
                   Divider(
                     thickness: 2,
                   ),
-                  SingleChildScrollView(
-                    child: Column(
-                      children: [
-                        Row(
-                          children: [
-                            ProfileCard(
-                              name: "Sushant",
-                              position: "Flutter Developer",
-                              imageAddress: "assets/profile_image.png",
-                            ),
-                            ProfileCard(
-                              name: "Sushant",
-                              position: "Flutter Developer",
-                              imageAddress: "assets/profile_image.png",
-                            ),
-                            ProfileCard(
-                              name: "Sushant",
-                              position: "Flutter Developer",
-                              imageAddress: "assets/profile_image.png",
-                            ),
-                            ProfileCard(
-                              name: "Sushant",
-                              position: "Flutter Developer",
-                              imageAddress: "assets/profile_image.png",
-                            )
-                          ],
-                        ),
-                        Row(
-                          children: [
-                            ProfileCard(
-                              name: "Hemang",
-                              position: "Flutter Developer",
-                              imageAddress: "assets/profile_image.png",
-                            ),
-                            ProfileCard(
-                              name: "Hemang",
-                              position: "Flutter Developer",
-                              imageAddress: "assets/profile_image.png",
-                            ),
-                            ProfileCard(
-                              name: "Hemang",
-                              position: "Flutter Developer",
-                              imageAddress: "assets/profile_image.png",
-                            ),
-                            ProfileCard(
-                              name: "Hemang",
-                              position: "Flutter Developer",
-                              imageAddress: "assets/profile_image.png",
-                            )
-                          ],
-                        )
-                      ],
-                    ),
+                  Expanded(
+                    flex: 100,
+                    child: (ListView.builder(
+                      scrollDirection: Axis.horizontal,
+                      itemCount: 12,
+                      shrinkWrap: false,
+                      itemBuilder: (context, pos) {
+                        return ProfileCard(
+                          name: "Sushant",
+                          position: "Flutter Developer",
+                          imageAddress: "assets/profile_image.png",
+                        );
+                      },
+                    )),
                   ),
                 ],
               ),
@@ -185,10 +96,47 @@ class _HomeState extends State<Home> {
     );
   }
 }
-
-//   void search() {
-//     employees.map((p) {
-//       return employeeDetailCard(Employee);
-//     }).toList();
-//   }
-// }
+// Row(
+// children: [
+// ProfileCard(
+// name: "Sushant",
+// position: "Flutter Developer",
+// imageAddress: "assets/profile_image.png",
+// ),
+// ProfileCard(
+// name: "Sushant",
+// position: "Flutter Developer",
+// imageAddress: "assets/profile_image.png",
+// ),
+// ProfileCard(
+// name: "Sushant",
+// position: "Flutter Developer",
+// imageAddress: "assets/profile_image.png",
+// ),
+// ProfileCard(
+// name: "Sushant",
+// position: "Flutter Developer",
+// imageAddress: "assets/profile_image.png",
+// ),
+// ProfileCard(
+// name: "Hemang",
+// position: "Flutter Developer",
+// imageAddress: "assets/profile_image.png",
+// ),
+// ProfileCard(
+// name: "Hemang",
+// position: "Flutter Developer",
+// imageAddress: "assets/profile_image.png",
+// ),
+// ProfileCard(
+// name: "Hemang",
+// position: "Flutter Developer",
+// imageAddress: "assets/profile_image.png",
+// ),
+// ProfileCard(
+// name: "Hemang",
+// position: "Flutter Developer",
+// imageAddress: "assets/profile_image.png",
+// )
+// ],
+// )

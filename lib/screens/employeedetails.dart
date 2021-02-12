@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:date_field/date_field.dart';
 import 'package:onepercent_hr_software/screens/dailytimesheet.dart';
 
 class EmployeeDetails extends StatefulWidget {

@@ -34,6 +34,9 @@ dev_dependencies:
     sdk: flutter
   flappy_search_bar: ^1.7.2
   date_field: ^1.0.4
+  flutter_easyloading: ^2.2.2
+  cloud_firestore: ^0.16.0
+  firebase_core: ^0.7.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "280326965379",
+    "project_id": "onepercenthrsoftware",
+    "storage_bucket": "onepercenthrsoftware.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:280326965379:android:7407d7bf71a4716d13b3b6",
+        "android_client_info": {
+          "package_name": "com.sushantwaghulde.onepercent_hr_software"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "280326965379-7hivq1gn77n5kistgmgsifuo82pufk19.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDWVUE5AMEWLcflbn_rebh8N65s63D130k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "280326965379-7hivq1gn77n5kistgmgsifuo82pufk19.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
